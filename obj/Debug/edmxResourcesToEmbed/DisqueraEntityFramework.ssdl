@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBDisQueraModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cancion">
+    <Key>
+      <PropertyRef Name="IdCancion" />
+    </Key>
+    <Property Name="IdCancion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Duracion" Type="int" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Composicion">
+    <Key>
+      <PropertyRef Name="IdCompositor" />
+      <PropertyRef Name="IdCancion" />
+    </Key>
+    <Property Name="IdCompositor" Type="int" Nullable="false" />
+    <Property Name="IdCancion" Type="int" Nullable="false" />
+    <Property Name="FechaComposicion" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compositor">
+    <Key>
+      <PropertyRef Name="IdCompositor" />
+    </Key>
+    <Property Name="IdCompositor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Celular" Type="int" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Composicion_Cancion">
+    <End Role="Cancion" Type="Self.Cancion" Multiplicity="1" />
+    <End Role="Composicion" Type="Self.Composicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cancion">
+        <PropertyRef Name="IdCancion" />
+      </Principal>
+      <Dependent Role="Composicion">
+        <PropertyRef Name="IdCancion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Composicion_Compositor">
+    <End Role="Compositor" Type="Self.Compositor" Multiplicity="1" />
+    <End Role="Composicion" Type="Self.Composicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compositor">
+        <PropertyRef Name="IdCompositor" />
+      </Principal>
+      <Dependent Role="Composicion">
+        <PropertyRef Name="IdCompositor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBDisQueraModelStoreContainer">
+    <EntitySet Name="Cancion" EntityType="Self.Cancion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Composicion" EntityType="Self.Composicion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compositor" EntityType="Self.Compositor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Composicion_Cancion" Association="Self.FK_Composicion_Cancion">
+      <End Role="Cancion" EntitySet="Cancion" />
+      <End Role="Composicion" EntitySet="Composicion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Composicion_Compositor" Association="Self.FK_Composicion_Compositor">
+      <End Role="Compositor" EntitySet="Compositor" />
+      <End Role="Composicion" EntitySet="Composicion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
