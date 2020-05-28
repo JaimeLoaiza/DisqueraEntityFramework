@@ -12,23 +12,23 @@ namespace DisqueraEntityFramework
         {
             using (DBDisQuera db = new DBDisQuera())
             {
-                /*Cancion cancion = new Cancion();
-                cancion.Nombre = "Enter Sadman";
-                cancion.Duracion = 5;
-                cancion.Genero = "RockMetal";
-                cancion.Descripcion = "Heavy";
+                Cancion cancion = new Cancion();
+                cancion.Nombre = "You are the voice";
+                cancion.Duracion = 4;
+                cancion.Genero = "Pop";
+                cancion.Descripcion = "rythm";
 
                 db.Cancion.Add(cancion);
                 db.SaveChanges();
 
-                Cancion cancion = db.Cancion.Find();*/
+                /*Cancion cancion = db.Cancion.Find();
                 Cancion cancion = db.Cancion.Where(d => d.Nombre == "Drive").First();
                 cancion.Genero = "Balada Pop";
                 db.Entry(cancion).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
 
                 db.Cancion.Remove(cancion);
-                db.SaveChanges();
+                db.SaveChanges();*/
 
                 var lst = db.Cancion;
                 foreach (var Cancion in lst)

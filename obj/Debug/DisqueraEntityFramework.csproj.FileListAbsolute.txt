@@ -9,3 +9,14 @@ C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\obj\Debug\DisqueraE
 C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\obj\Debug\DisqueraEntityFramework.csproj.CopyComplete
 C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\obj\Debug\DisqueraEntityFramework.exe
 C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\obj\Debug\DisqueraEntityFramework.pdb
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\bin\Debug\DisqueraEntityFramework.exe.config
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\bin\Debug\DisqueraEntityFramework.exe
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\bin\Debug\DisqueraEntityFramework.pdb
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\obj\Debug\DisqueraEntityFramework.csprojAssemblyReference.cache
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\obj\Debug\DisqueraEntityFramework.csproj.CopyComplete
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\obj\Debug\DisqueraEntityFramework.exe
+C:\Users\Familia Loaiza\source\repos\DisqueraEntityFramework\DisqueraEntityFramework\obj\Debug\DisqueraEntityFramework.pdb
